@@ -13,8 +13,67 @@
     tools:showIn="@layout/activity_main"
     tools:context=".MainActivity">
 
+   <TextView
+       android:id="@+id/login_textview"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:gravity="center"
+       android:textSize="30sp"
+       android:text="@string/login"/>
+
     <TextView
-        android:text="Hello World!"
+        android:id="@+id/user_name_textview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/login_textview"
+        android:textSize="20sp"
+        android:text="@string/user_name"/>
+
+    <EditText
+        android:id="@+id/user_name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/login_textview"
+        android:layout_toRightOf="@id/user_name_textview"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/password_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/user_name_textview"
+        android:textSize="20sp"
+        android:text="@string/password"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/user_name_edittext"
+        android:layout_toRightOf="@id/password_textview"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/login_kr"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/signup"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
