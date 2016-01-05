@@ -13,8 +13,84 @@
     tools:showIn="@layout/activity_main"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_icon"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name_text"
+            android:text="이름"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/name_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/age_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_icon"
+        android:layout_below="@id/name_layout"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/age_text"
+            android:text="나이"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/age_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/name_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/major_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_icon"
+        android:layout_below="@id/age_layout"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/major_text"
+            android:text="전공"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/major_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/name_text"/>
+
+    </LinearLayout>
+
     <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/major_layout"
+        tools:text="Result TextView"/>
+
 </RelativeLayout>
