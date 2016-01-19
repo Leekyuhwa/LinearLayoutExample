@@ -8,9 +8,6 @@ import android.support.v7.app.AppCompatDialogFragment;
 
 import com.example.backgom.linearlayoutexample.R;
 
-/**
- * Created by Coupang on 2016-01-19.
- */
 public class DefaultDialogFragment extends AppCompatDialogFragment {
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {

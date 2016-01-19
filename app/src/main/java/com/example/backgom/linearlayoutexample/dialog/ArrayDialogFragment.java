@@ -9,9 +9,6 @@ import android.util.Log;
 
 import com.example.backgom.linearlayoutexample.R;
 
-/**
- * Created by Coupang on 2016-01-19.
- */
 public class ArrayDialogFragment extends AppCompatDialogFragment {
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {

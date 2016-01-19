@@ -10,9 +10,6 @@ import com.example.backgom.linearlayoutexample.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Coupang on 2016-01-19.
- */
 public class MultiDialogFragment extends AppCompatDialogFragment {
 
 	private ArrayList mSelectedItems;
@@ -34,7 +31,6 @@ public class MultiDialogFragment extends AppCompatDialogFragment {
 						}
 					}
 				})
-			// Set the action buttons
 			.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int id) {

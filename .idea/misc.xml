@@ -4,6 +4,8 @@
     <option name="defaultSettings" value="true" />
     <option name="formatter" value="ECLIPSE" />
     <option name="id" value="1444010883459" />
+    <option name="importOrderConfigFilePath" value="D:/개발환경/포멧터/android.importorder" />
+    <option name="importOrderFromFile" value="true" />
     <option name="name" value="default" />
     <option name="pathToConfigFileJava" value="D:/개발환경/포멧터/Coupang Formatter for Java_2014_08_26.xml" />
     <option name="selectedJavaProfile" value="Coupang Standard For JAVA(v1.1)" />
