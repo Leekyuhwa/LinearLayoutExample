@@ -3,11 +3,10 @@
   <component name="EclipseCodeFormatter">
     <option name="defaultSettings" value="true" />
     <option name="formatter" value="ECLIPSE" />
-    <option name="id" value="1444010883459" />
+    <option name="id" value="1431918371153" />
     <option name="name" value="default" />
-    <option name="pathToConfigFileJava" value="D:/개발환경/포멧터/Coupang Formatter for Java_2014_08_26.xml" />
+    <option name="pathToConfigFileJava" value="$USER_HOME$/Downloads/Coupang Formatter for Java_2014_08_26.xml" />
     <option name="selectedJavaProfile" value="Coupang Standard For JAVA(v1.1)" />
-    <option name="useOldEclipseJavaFormatter" value="true" />
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
