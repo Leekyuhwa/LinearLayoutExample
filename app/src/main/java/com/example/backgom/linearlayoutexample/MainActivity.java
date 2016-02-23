@@ -1,16 +1,18 @@
 package com.example.backgom.linearlayoutexample;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
+	final String TAG = "States";
+
+	/**
+	 * @param savedInstanceState
+	 * 엑티비티가 생성될때 호출 되면서 사용자 인터페이스 초기화
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,35 +20,61 @@ public class MainActivity extends AppCompatActivity {
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
-		FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-		fab.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-						.setAction("Action", null).show();
-			}
-		});
+		Log.d(TAG, "MainActivity: onCreate()");
 	}
 
+	/**
+	 * 엑티비티가 사용자에게 보여지기 바로 직전에 호출
+	 */
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_main, menu);
-		return true;
+	protected void onStart() {
+		super.onStart();
+		Log.d(TAG, "MainActivity: onStart()");
 	}
 
+
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
+	protected void onRestart() {
+		super.onRestart();
+		Log.d(TAG, "MainActivity: onRestart()");
+	}
 
-		//noinspection SimplifiableIfStatement
-		if (id == R.id.action_settings) {
-			return true;
-		}
+	/**
+	 * 엑티비티가 사용자와 상호작용 하기 바로 직전에 호출
+	 */
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.d(TAG, "MainActivity: onResume()");
+	}
 
-		return super.onOptionsItemSelected(item);
+	/**
+	 * 다른 엑티비티가 보여질 때 호출
+	 * 데이터 저장, 스레드 중지 등 처리하기 적당함
+	 */
+	@Override
+	protected void onPause() {
+		super.onPause();
+		Log.d(TAG, "MainActivity: onPause()");
+	}
+
+	/**
+	 * 엑티비티가 더이상 사용자에게 보여지지 않을 때 호출
+	 * 메모리가 부족할 경우 호출이 안될 수도 있음
+	 */
+	@Override
+	protected void onStop() {
+		super.onStop();
+		Log.d(TAG, "MainActivity: onStop()");
+	}
+
+	/**
+	 * 엑티비티가 소멸 될떄 호출
+	 * finish() 메서드 호출하거나 시스템 메모리 확보를 위해 메모리에서 엑티비티 제거 할 때 호출
+	 */
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Log.d(TAG, "MainActivity: onDestroy()");
 	}
 }
