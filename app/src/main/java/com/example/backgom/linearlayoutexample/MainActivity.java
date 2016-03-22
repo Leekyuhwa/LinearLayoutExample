@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		ButterKnife.bind(this);
 
-		pager.setAdapter(new MainPagerAdapter(getSupportFragmentManager()));
+//		pager.setAdapter(new MainFragmentPagerAdapter(getSupportFragmentManager()));
+		pager.setAdapter(new MainPagerAdapter(this));
 		tabLayout.setupWithViewPager(pager);
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -45,23 +46,24 @@ public class MainActivity extends AppCompatActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-
-		//noinspection SimplifiableIfStatement
 		if (id == R.id.action_settings) {
 			return true;
 		}
 
 		return super.onOptionsItemSelected(item);
 	}
+
+	/**
+	 * FragmentPagerAdapter - Fragment 처리 하는 페저이 아답터 히스토리 저장
+ 	 * FragmentStatePagerAdapter - Fragment 처리 하는 페저이 아답터 히스토리 저장 X
+	 * PagerAdapter - 뷰 처리
+	 *
+	 * */
 }
